@@ -14,8 +14,10 @@
 
   // Fold diacritics so an ASCII query ("miclau") matches an accented title ("Miclău").
   // Same transform as the site search. Precompute each item's folded title once.
+  var EXTRA_FOLD = { "\u0142": "l", "\u00f8": "o", "\u0131": "i", "\u0111": "d", "\u00e6": "ae" };
   function fold(s) {
-    return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    s = s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    return s.replace(/[\u0142\u00f8\u0131\u0111\u00e6]/g, function (c) { return EXTRA_FOLD[c]; });
   }
   items.forEach(function (li) {
     var title = li.getAttribute("data-title") || "";

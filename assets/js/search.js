@@ -19,11 +19,20 @@
   // Fold diacritics (NFD + strip combining marks) so accented letters in titles —
   // ~16% of the corpus (Romanian, Slovak, German …) — aren't shredded into fragments.
   // The SAME transform runs on index and query, so "Iasi" matches "Iași" and vice versa.
+  // A handful of letters aren't NFD-decomposable (they're base letters, not letter+accent)
+  // but do have an obvious ASCII equivalent \u2014 e.g. Polish \u0142 (73 occurrences in this
+  // corpus alone), Danish/Norwegian \u00f8, Turkish dotless \u0131, \u0111, \u00e6. Map
+  // those explicitly so an ASCII-typed query ("walkowski") still finds the accented form.
+  var EXTRA_FOLD = { "\u0142": "l", "\u00f8": "o", "\u0131": "i", "\u0111": "d", "\u00e6": "ae" };
   function fold(s) {
-    return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    s = s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    return s.replace(/[\u0142\u00f8\u0131\u0111\u00e6]/g, function (c) { return EXTRA_FOLD[c]; });
   }
   function tokenize(s) {
-    return fold(s).split(/[^a-z0-9]+/).filter(Boolean);
+    // \p{L}/\p{N} (Unicode letter/number, not just ASCII a-z0-9) so a title/author/keyword
+    // in Polish, Cyrillic, Greek, or CJK script tokenizes as whole words instead of being
+    // split apart at every character its script doesn't share with ASCII.
+    return fold(s).split(/[^\p{L}\p{N}]+/u).filter(Boolean);
   }
 
   // Pre-tokenize each entry once, after load, for fast repeated matching. Indexes title,
