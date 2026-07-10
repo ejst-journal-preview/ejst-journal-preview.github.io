@@ -39,7 +39,8 @@
   }
 
   function matches(article, queryTokens) {
-    // Every query token must prefix-match at least one title token.
+    // Every query token must prefix-match at least one token from this article's combined
+    // title + authors + keywords (see prepare() above), not just its title.
     for (var q = 0; q < queryTokens.length; q++) {
       var qt = queryTokens[q];
       var hit = false;
