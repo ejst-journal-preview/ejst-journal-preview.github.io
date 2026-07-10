@@ -309,9 +309,18 @@ h2 { font-family: var(--font-display); color: var(--navy-900); font-size: 1.4rem
 }
 .tag-open { background: var(--open-bg); color: var(--open); }
 .tag-restricted { background: var(--maroon-50); color: var(--maroon-800); }
+.tag-past { background: var(--paper-sink); color: var(--ink-faint); }
 .restricted-title { font-weight: 600; }
 .restricted-note { display: block; color: var(--ink-soft); font-style: italic; }
 .restricted-note a { font-weight: 600; }
+
+.news-item { margin-bottom: 2.25rem; padding-bottom: 2.25rem; border-bottom: 1px solid var(--line); }
+.news-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.news-item-head { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; }
+.news-date { font-size: 0.85rem; color: var(--ink-faint); }
+.news-item h2 { margin: 0 0 0.5rem; }
+.news-location { color: var(--ink-soft); font-style: italic; margin-top: -0.25rem; }
+.news-past-events { font-size: 0.88rem; color: var(--ink-soft); }
 
 .article-authors { display: block; font-size: 0.83rem; font-weight: 400; color: var(--ink-soft); margin-top: 0.1rem; }
 

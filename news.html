@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Search — European Journal of Science and Theology</title>
-<meta name="description" content="Search every article in the European Journal of Science and Theology archive.">
+<title>News — European Journal of Science and Theology</title>
+<meta name="description" content="News and event announcements from the European Journal of Science and Theology.">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="alternate" type="application/rss+xml" title="EJST — latest volume" href="feed.xml">
 <noscript><style>.site-nav ul { display: flex !important; }</style></noscript>
@@ -23,8 +23,8 @@
     <ul>
       <li><a href="index.htm">Home</a></li>
       <li><a href="archive.html">Archive</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="search.html" aria-current="page">Search</a></li>
+      <li><a href="news.html" aria-current="page">News</a></li>
+      <li><a href="search.html">Search</a></li>
       <li><a href="instructions.htm">For Authors</a></li>
       <li><a href="editorial.html">Editorial Board</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -35,36 +35,52 @@
 
 <div class="page">
   <div class="page-header">
-    <div class="eyebrow">Search</div>
-    <h1>Search the archive</h1>
-    <p class="lede">Full-text search across all 1,882 article titles in 22 volumes.
-    Runs entirely in your browser — nothing is sent anywhere.</p>
+    <div class="eyebrow">Announcements</div>
+    <h1>News</h1>
+    <p class="lede">Conferences, symposia, and other announcements from the journal.</p>
   </div>
-
-  <form class="search-hero" role="search" id="search-form">
-    <label class="visually-hidden" for="search-input">Search article titles</label>
-    <input type="search" id="search-input" name="q" placeholder="Search titles — e.g. “bioethics”, “icon restoration”, “cosmology”…"
-           autocomplete="off">
-  </form>
-
-  <div class="suggested">
-    <span>Try:</span>
-    <div class="chip-row">
-      <button type="button" class="chip" data-q="bioethics">bioethics</button>
-      <button type="button" class="chip" data-q="cosmology">cosmology</button>
-      <button type="button" class="chip" data-q="evolution">evolution</button>
-      <button type="button" class="chip" data-q="icon restoration">icon restoration</button>
-      <button type="button" class="chip" data-q="consciousness">consciousness</button>
-      <button type="button" class="chip" data-q="artificial intelligence">artificial intelligence</button>
-      <button type="button" class="chip" data-q="Orthodox">Orthodox</button>
-      <button type="button" class="chip" data-q="quantum">quantum</button>
-      <button type="button" class="chip" data-q="environment">environment</button>
-      <button type="button" class="chip" data-q="patristic">patristic</button>
+  <div class="layout">
+    <div class="prose news-list">
+      
+    <article class="news-item">
+      <div class="news-item-head">
+        <span class="tag tag-past">Past event</span>
+        <span class="news-date">23–24 October 2025</span>
+      </div>
+      <h2>ESRARC 2025 — 14th European Symposium on Religious Art Restoration &amp; Conservation</h2>
+      <p class="news-location">Casa Universitarilor (a historic building dating to 1800), 11 Carol I Blvd., Iași, Romania</p>
+      <p>The 14th edition of ESRARC, held in memory of Dr. Iulian Rusu, brought together contributions across two tracks: the socio-spiritual and cultural significance of religious art (artistic and cultural evaluation; historical, theological and social perspectives; religion and cross-cultural communication; religion and globalization; religion, conflict and cultural heritage) and the conservation and restoration of religious heritage itself (environmental impact; analytical, diagnostic and intervention methods; new conservation and restoration materials; monitoring and scheduled maintenance).</p><p>Symposium chair: Nicoleta Melniciuc Puică, PhD, “Alexandru Ioan Cuza” University of Iași, Romania.</p>
+      <p class="news-past-events">Previous editions: <a href="http://www.ejst.tuiasi.ro/esrarc2023/index.html" target="_blank" rel="noopener">ESRARC 2023</a> · <a href="http://www.ejst.tuiasi.ro/esrarc2022/index.html" target="_blank" rel="noopener">ESRARC 2022</a> · <a href="http://www.ejst.tuiasi.ro/esrarc2019/index.html" target="_blank" rel="noopener">ESRARC 2019</a> · <a href="http://www.ejst.tuiasi.ro/esrarc2018/index.html" target="_blank" rel="noopener">ESRARC 2018</a> · <a href="http://www.ejst.tuiasi.ro/esrarc2017/index.html" target="_blank" rel="noopener">ESRARC 2017</a> · <a href="http://omicron.ch.tuiasi.ro/esrarc/" target="_blank" rel="noopener">ESRARC 2016</a></p>
+    </article>
     </div>
-  </div>
+    
+<aside class="sidebar">
+  <section>
+    <h2>Indexed &amp; abstracted in</h2>
+    <ul>
+      <li>Web of Science (ESCI) — Clarivate</li>
+      <li>Scopus — Elsevier</li>
+      <li>EBSCO</li>
+      <li>ERIH PLUS</li>
+      <li>Index Copernicus International</li>
+      <li>MIAR</li>
+      <li>Index Islamicus</li>
+      <li>CNKI</li>
+      <li>CARHUS PLUS+</li>
+      <li>Elektronische Zeitschriftenbibliothek</li>
+    </ul>
+  </section>
+  <section class="issn-block">
+    <h2>ISSN</h2>
+    <p>1842-8517 (online)<br>1841-0464 (print)</p>
+  </section>
+  <section>
+    <h2>Search</h2>
+    <p><a class="button button-sm" href="search.html">Search all articles →</a></p>
+  </section>
+</aside>
 
-  <p class="search-status" id="search-status" aria-live="polite">Loading the archive index…</p>
-  <ol class="search-results" id="search-results"></ol>
+  </div>
 </div>
 
 </main>
@@ -112,7 +128,5 @@
   </div>
 </footer>
 <script src="assets/js/nav.js"></script>
-<script src="search-index.js"></script>
-<script src="assets/js/search.js"></script>
 </body>
 </html>
