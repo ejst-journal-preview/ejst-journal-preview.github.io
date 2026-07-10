@@ -322,6 +322,12 @@ h2 { font-family: var(--font-display); color: var(--navy-900); font-size: 1.4rem
 .news-location { color: var(--ink-soft); font-style: italic; margin-top: -0.25rem; }
 .news-past-events { font-size: 0.88rem; color: var(--ink-soft); }
 
+.news-newsletters { margin-top: 2.5rem; }
+.newsletter-list { list-style: none; padding: 0; margin: 1rem 0 0; }
+.newsletter-list li { padding: 0.45rem 0; border-top: 1px solid var(--line); font-size: 0.92rem; }
+.newsletter-list li:first-child { border-top: none; }
+.newsletter-list a { margin-right: 0.4rem; }
+
 .article-authors { display: block; font-size: 0.83rem; font-weight: 400; color: var(--ink-soft); margin-top: 0.1rem; }
 
 .abstract { margin-top: 0.35rem; }
